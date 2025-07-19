@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+transformers
+torch
+readability-lxml
+beautifulsoup4
+requests
+lxml_html_clean
