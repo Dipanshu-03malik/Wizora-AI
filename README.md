@@ -71,3 +71,26 @@ uvicorn app.main:app --reload
 
 - Ensure the document is uploaded first.
 - You can use Postman to test both endpoints.
+
+
+
+# Image Generator Backend (FastAPI)
+
+This is a lightweight backend to handle image generation using the [apiimagestrax](https://apiimagestrax.vercel.app/api/genimage) API.
+
+## Features
+
+- ✅ Prompt-based image generation
+- ⚡ Caching for repeated prompts
+- ⏱️ Timeout protection
+- 📏 Resizes large images for frontend use (max 512x512)
+- 🖼️ Base64-encoded PNG image response
+
+## Run the server
+
+```bash
+pip install -r requirements.txt
+uvicorn main:app --reload
+```
+
+Then hit: `http://127.0.0.1:8000/generate-image`
