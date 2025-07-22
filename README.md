@@ -94,3 +94,38 @@ uvicorn main:app --reload
 ```
 
 Then hit: `http://127.0.0.1:8000/generate-image`
+
+
+
+# CSV Insights Backend (Postman + Hugging Face)
+
+This is a FastAPI backend that receives a CSV file and returns AI-generated insights using `google/flan-t5-base`.
+
+## 🔧 Installation
+
+```bash
+pip install -r requirements.txt
+```
+
+## 🚀 Run the Server
+
+```bash
+uvicorn main:app --reload
+```
+
+Server will run at: http://127.0.0.1:8000
+
+## 🧪 Test with Postman
+
+- Method: POST
+- URL: http://127.0.0.1:8000/analyze-csv/
+- Body: form-data
+  - key: file (type: File)
+  - value: Upload your CSV file
+
+## 📦 Dependencies
+- FastAPI
+- Uvicorn
+- Transformers (Hugging Face)
+- Pandas
+- Torch
